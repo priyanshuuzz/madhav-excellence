@@ -38,6 +38,22 @@ ul { list-style: none; padding: 0; }
   .two-col { grid-template-columns: 1fr !important; gap: 2rem !important; }
   .feat-grid { grid-template-columns: 1fr !important; }
   .footer-grid { grid-template-columns: 1fr 1fr !important; }
+  
+  /* Hero responsive */
+  .hero-section { 
+    grid-template-columns: 1fr !important; 
+    padding: 90px 4vw 60px !important;
+    gap: 2rem !important;
+  }
+  .hero-visual-mobile { 
+    display: block !important; 
+    height: auto !important;
+    margin-top: 2rem;
+  }
+  .hero-visual-mobile img {
+    object-fit: contain !important;
+    height: auto !important;
+  }
 }
 
 @media (max-width: 600px) {

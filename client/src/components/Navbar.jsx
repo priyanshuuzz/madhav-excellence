@@ -16,8 +16,17 @@ export default function Navbar() {
   return (
     <>
       <nav style={{ position: "fixed", top: 0, left: 0, right: 0, zIndex: 999, padding: "0 5vw", height: 70, display: "flex", alignItems: "center", justifyContent: "space-between", background: "rgba(255,255,255,.96)", backdropFilter: "blur(12px)", borderBottom: `1px solid rgba(13,31,78,.08)`, boxShadow: scrolled ? "0 4px 24px rgba(13,31,78,.10)" : "none", transition: "box-shadow .3s" }}>
-        <a href="#" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
-          <div style={{ width: 40, height: 40, background: C.navy, borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 18 }}>🎓</div>
+        <a href="#" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none" }}>
+          <img 
+            src="/logo.png" 
+            alt="Madhav Excellence Logo" 
+            style={{ 
+              height: 45, 
+              width: 45, 
+              objectFit: "contain",
+              flexShrink: 0
+            }} 
+          />
           <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "1.1rem", color: C.navy, lineHeight: 1.1 }}>
             Madhav Excellence
             <span style={{ display: "block", fontFamily: "'DM Sans', sans-serif", fontSize: ".65rem", fontWeight: 400, color: C.saffron, letterSpacing: ".08em" }}>Where Knowledge Meets Excellence</span>

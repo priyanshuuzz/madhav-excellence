@@ -31,7 +31,7 @@ export default function Hero() {
   const lblStyle = { display: "block", fontSize: ".75rem", color: C.muted, fontWeight: 500, textTransform: "uppercase", letterSpacing: ".05em" };
 
   return (
-    <section style={{ minHeight: "100vh", padding: "110px 5vw 80px", display: "grid", gridTemplateColumns: "1fr 1fr", alignItems: "center", gap: "4rem", background: `linear-gradient(135deg,${C.cream} 60%,#FEE8D6 100%)`, position: "relative", overflow: "hidden" }}>
+    <section className="hero-section" style={{ minHeight: "100vh", padding: "90px 5vw 80px", display: "grid", gridTemplateColumns: "1fr 1.1fr", alignItems: "center", gap: "3rem", background: `linear-gradient(135deg,${C.cream} 60%,#FEE8D6 100%)`, position: "relative", overflow: "hidden" }}>
       <div style={{ position: "absolute", top: -100, right: -100, width: 600, height: 600, borderRadius: "50%", background: "radial-gradient(circle,rgba(249,115,22,.08) 0%,transparent 70%)", pointerEvents: "none" }} />
       <div>
         <div style={{ display: "inline-flex", alignItems: "center", gap: ".5rem", background: "rgba(249,115,22,.1)", border: "1px solid rgba(249,115,22,.25)", borderRadius: 100, padding: ".3rem .9rem", fontSize: ".78rem", fontWeight: 600, color: C.saffron, marginBottom: "1.2rem" }}>⭐ Trusted by Students in 15+ Countries</div>
@@ -51,18 +51,51 @@ export default function Hero() {
           <div style={{ textAlign: "center" }}><span style={numStyle}>{counts.c}.0⭐</span><span style={lblStyle}>Parent Rating</span></div>
           <div style={{ textAlign: "center" }}><span style={numStyle}>4–5</span><span style={lblStyle}>Batch Size</span></div>
         </div>
+        
+        {/* Mobile Image */}
+        <div className="hero-visual-mobile" style={{ position: "relative", width: "100%", height: "auto", display: "none" }}>
+          <img 
+            src="/hero-image.jpg" 
+            alt="Madhav Excellence Learning" 
+            style={{ 
+              width: "100%", 
+              height: "auto", 
+              borderRadius: 24, 
+              boxShadow: "0 20px 60px rgba(13,31,78,.20)",
+              objectFit: "contain",
+              display: "block"
+            }} 
+          />
+          <div style={{ position: "absolute", top: 10, right: 10, background: C.white, borderRadius: 100, boxShadow: "0 4px 24px rgba(13,31,78,.10)", padding: ".6rem 1rem", display: "flex", alignItems: "center", gap: ".6rem", fontSize: ".82rem", fontWeight: 600, color: C.navy }}>
+            🌟 5.0 Rating
+          </div>
+          <div style={{ position: "absolute", bottom: 10, left: 10, background: C.white, borderRadius: 100, boxShadow: "0 4px 24px rgba(13,31,78,.10)", padding: ".6rem 1rem", display: "flex", alignItems: "center", gap: ".6rem", fontSize: ".82rem", fontWeight: 600, color: C.navy }}>
+            <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e" }} />
+            Live Sessions
+          </div>
+        </div>
       </div>
 
-      <div className="hero-visual" style={{ position: "relative" }}>
-        <div style={{ background: C.white, borderRadius: 20, boxShadow: "0 16px 48px rgba(13,31,78,.16)", position: "relative" }}>
-          <div style={{ width: "100%", aspectRatio: "4/3", background: `linear-gradient(135deg,${C.navy} 0%,${C.navyL} 100%)`, borderRadius: 20, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: ".8rem", color: "rgba(255,255,255,.75)", fontSize: ".95rem" }}>
-            <div style={{ fontSize: "4.5rem" }}>📚</div>
-            <div>Expert-led learning, every day</div>
-          </div>
-          <div style={{ position: "absolute", top: -16, right: -16, background: C.white, borderRadius: 12, boxShadow: "0 4px 24px rgba(13,31,78,.10)", padding: ".6rem 1rem", display: "flex", alignItems: "center", gap: ".6rem", fontSize: ".82rem", fontWeight: 600, color: C.navy }}>🌟 5.0 Rating from Parents</div>
-          <div style={{ position: "absolute", bottom: 20, left: -20, background: C.white, borderRadius: 12, boxShadow: "0 4px 24px rgba(13,31,78,.10)", padding: ".6rem 1rem", display: "flex", alignItems: "center", gap: ".6rem", fontSize: ".82rem", fontWeight: 600, color: C.navy }}>
-            <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e" }} />Live Sessions Available
-          </div>
+      {/* Desktop Image */}
+      <div className="hero-visual" style={{ position: "relative", width: "100%", height: "500px" }}>
+        <img 
+          src="/hero-image.jpg" 
+          alt="Madhav Excellence Learning" 
+          style={{ 
+            width: "100%", 
+            height: "100%", 
+            borderRadius: 24, 
+            boxShadow: "0 20px 60px rgba(13,31,78,.20)",
+            objectFit: "cover",
+            display: "block"
+          }} 
+        />
+        <div style={{ position: "absolute", top: 10, right: 10, background: C.white, borderRadius: 100, boxShadow: "0 4px 24px rgba(13,31,78,.10)", padding: ".6rem 1rem", display: "flex", alignItems: "center", gap: ".6rem", fontSize: ".82rem", fontWeight: 600, color: C.navy }}>
+          🌟 5.0 Rating from Parents
+        </div>
+        <div style={{ position: "absolute", bottom: 10, left: 10, background: C.white, borderRadius: 100, boxShadow: "0 4px 24px rgba(13,31,78,.10)", padding: ".6rem 1rem", display: "flex", alignItems: "center", gap: ".6rem", fontSize: ".82rem", fontWeight: 600, color: C.navy }}>
+          <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e" }} />
+          Live Sessions Available
         </div>
       </div>
     </section>

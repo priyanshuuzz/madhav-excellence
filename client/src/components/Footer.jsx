@@ -4,7 +4,7 @@ import { CONTACT } from "../constants/data";
 const QUICK_LINKS = [["#about","About Us"],["#programs","Our Programs"],["#why","Why Choose Us"],["#testimonials","Success Stories"],["#faq","FAQ"],["#demo","Book Demo Class"]];
 const PROGRAMS = ["Academic Tutoring","Olympiad Training","IB / GCSE / CBSE / ICSE","Meditation Program","Counseling & Mentorship","Value-Based Learning"];
 const CONTACTS = [
-  { icon: "📧", href: `mailto:${CONTACT.email}`, label: CONTACT.email },
+  { icon: "📧", href: `https://mail.google.com/mail/?view=cm&fs=1&to=${CONTACT.email}`, label: CONTACT.email, external: true },
   { icon: "📞", href: `tel:${CONTACT.phone1.replace(/\s/g,"")}`, label: CONTACT.phone1 },
   { icon: "📞", href: `tel:${CONTACT.phone2.replace(/\s/g,"")}`, label: CONTACT.phone2 },
   { icon: "💬", href: CONTACT.whatsapp, label: "WhatsApp Us", external: true },
@@ -19,8 +19,18 @@ export default function Footer() {
       <div className="footer-grid" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "3rem", marginBottom: "3rem" }}>
         {/* Brand */}
         <div>
+          <img 
+            src="/logo.png" 
+            alt="Madhav Excellence Logo" 
+            style={{ 
+              height: 70, 
+              width: "auto", 
+              objectFit: "contain",
+              marginBottom: "1rem"
+            }} 
+          />
           <div style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.2rem", fontWeight: 700, color: "#fff" }}>
-            🎓 Madhav Excellence
+            Madhav Excellence
             <span style={{ display: "block", fontFamily: "'DM Sans', sans-serif", fontSize: ".7rem", fontWeight: 400, color: C.saffron, letterSpacing: ".08em", marginTop: ".1rem" }}>Where Knowledge Meets Excellence</span>
           </div>
           <p style={{ fontSize: ".85rem", lineHeight: 1.7, marginTop: ".8rem", maxWidth: 260 }}>
